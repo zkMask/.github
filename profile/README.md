@@ -35,6 +35,7 @@ Now whenever the user initiates any transaction through a dapp which integrates 
 **ZK Implementation**
 We are using custom circom circuits implementation to verify user anonymously. The circom circuit take the unique key as private input and the Poseidon hash as the public input and using the circuit maths verifies that the proof generated is correct or not based on the circuit logic. 
  
-The App is Deployed on Goerli, Gnosis Chiado testnet, polgyon zkevm ---- .
+0xb6A381c10a367816Be5fb1dd4f35f150b7d8bc1b - Chiado Testnet
+0x6187EBe7d3D7fe033E3EA060b15a26fBe157fE01 - Goerli Chain
 
 
