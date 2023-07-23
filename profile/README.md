@@ -2,6 +2,7 @@
 ## (Easy and Secure transactions using 2 Factor Authentication)
 
 Once the keys are lost the Funds are too! 
+
 But ZKMask adds an extra layer of Security to save all those funds by leveraging the power of AI Face Verification and ZK Proofs.
 
 ZKMask is the ultimate 2 Factor Authentication app needed to secure all transactions through Face Verification and Prooving it by Zero Knowledge Proof Contract. The DeepFace AI model verifies if the owner of the key is the one signing the transaction and reverts the process of 2FA if this does not happen the Zero Knowledge smart contract generates the proof for the same after which only the user signs the transaction and makes it go through. This 2 Factor Authentication using the  Deepface AI model and Zero Knowledge Proof brings reliability to the security layer added through ZKMask.
