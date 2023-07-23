@@ -4,6 +4,16 @@
 Once the keys are lost the Funds are too! 
 
 But ZKMask adds an extra layer of Security to save all those funds by leveraging the power of AI Face Verification and ZK Proofs.
+##
+## Links To Repositories
+- [React-Native Frontend](https://github.com/zkMask/mobile-frontend)
+- [AI and Integrations BackEnd](https://github.com/zkMask/backend)
+- [Smart Contracts](https://github.com/zkMask/contracts)
+- [Zk-Circuits](https://github.com/zkMask/zkMask-circuits)
+- [Subgraph](https://github.com/zkMask/zkMask-subgraph)
+- [Push Channel](https://github.com/zkMask/zkMask-pushNotif)
+- [Demo Dapp](https://github.com/zkMask/TestingDapp)
+
 
 ZKMask is the ultimate 2 Factor Authentication app needed to secure all transactions through Face Verification and Prooving it by Zero Knowledge Proof Contract. The DeepFace AI model verifies if the owner of the key is the one signing the transaction and reverts the process of 2FA if this does not happen the Zero Knowledge smart contract generates the proof for the same after which only the user signs the transaction and makes it go through. This 2 Factor Authentication using the  Deepface AI model and Zero Knowledge Proof brings reliability to the security layer added through ZKMask.
 
