@@ -15,13 +15,6 @@ The project consists of several parts:
 - Anonymous Zero-Knowledge Idenetification of user signature through circom circuits.
 - Transaction initiation or rejection
 
-**Architecture**
-
-![reg_flow](https://github.com/zkMask/.github/assets/76250660/9462e666-f75e-494a-96ae-a254fda33a32)
-![auth_flow](https://github.com/zkMask/.github/assets/76250660/40fa5ffd-899e-4e2c-b068-b2cd733a0363)
-
-The DeepFace AI model verifies if the owner of the key is the one signing the transaction and reverts the process of 2FA if this does not happen the Zero Knowledge smart contract generates the proof for the same after which only the user signs the transaction and makes it go through. This 2 Factor Authentication using the  Deepface AI model and Zero Knowledge Proof brings reliability to the security layer added through ZKMask.
-
 ## Links To Repositories
 - [React-Native Frontend](https://github.com/zkMask/mobile-frontend)
 - [AI and Integrations BackEnd](https://github.com/zkMask/backend)
@@ -31,13 +24,16 @@ The DeepFace AI model verifies if the owner of the key is the one signing the tr
 - [Push Channel](https://github.com/zkMask/zkMask-pushNotif)
 - [Demo Dapp](https://github.com/zkMask/TestingDapp)
 
-## 
-The problem of losing funds due to losing control over the private key is a very common problem that many crypto users face. ZKMask solves this problem by adding an additional layer of security by which even the wallets with compromised keys wallets remain safe by 2FA. This additional layer of security uses concepts of Artificial Intelligence and Zero-Knowledge for verification using various Face alignments, detection, embeddings, and features extraction and ------------- using Zero Knowledge Concepts. 
+**Architecture**
+![reg_flow](https://github.com/zkMask/.github/assets/76250660/9462e666-f75e-494a-96ae-a254fda33a32)
+![auth_flow](https://github.com/zkMask/.github/assets/76250660/40fa5ffd-899e-4e2c-b068-b2cd733a0363)
 
-Users have to first register their Identity on the ZKMask mobile app by capturing their photo for future verification by the AI model. Later this sample is used as a sample for face verification when the user wants to perform 2FA before signing a transaction. During 2FA the captured face image is taken and passed through the DeepFace AI model that checks if the captured image has any resemblance with the images registered already on our App. If YES the image is passed for Proof generation contract by ZK Model or else is rejected and 2FA fails and the transaction security is maintained. 
+At the time of user registration, the user needs to connect his wallet through walletconnect, this helps in login sessions of user for the public hash association which might be needed to generate proof. The unique key is generated randomly using strong cryptographic functions and logics. The Poseidon hash of the unique key is stored in a mapping for verification and proof generation. Along with this he needs to capture 5-6 different images of his face for the dataset to be used by the AI model.<br>
 
-In the ZK Model the face ----------------------------------------------.
-This ensures that the face verification done by the AI model is done correctly and ZK gives the Proof for same.
+Now whenever the user initiates any transaction through a dapp which integrates our app, he will have to verify on another device (we did this to add another back up method). He logins into the app, gets the notif of a new authentication request which he could either accept or decline. When he accepts the request, he needs to scan his face, the face then goes to DeepFace AI model which recognises whether the user is right and then sends the inputs to the custom implemented zk circuit which does the further verification and outputs the result to the dapp who is listening to the zkMask's contract. Based on the result, the dapp performs the further transactions.
+
+**ZK Implementation**
+We are using custom circom circuits implementation to verify user anonymously. The circom circuit take the unique key as private input and the Poseidon hash as the public input and using the circuit maths verifies that the proof generated is correct or not based on the circuit logic. 
  
 The App is Deployed on Goerli, Gnosis Chiado testnet, polgyon zkevm ---- .
 
