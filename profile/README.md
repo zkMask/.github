@@ -15,8 +15,7 @@ The project consists of several parts:
 - Anonymous Zero-Knowledge Idenetification of user signature through circom circuits.
 - Transaction initiation or rejection
 
-**Architecture**!
-[zkmask drawio](https://github.com/zkMask/.github/assets/76250660/dd128045-f086-42ae-90d2-c15a5c1d2c93)
+**Architecture**
 
 
 The DeepFace AI model verifies if the owner of the key is the one signing the transaction and reverts the process of 2FA if this does not happen the Zero Knowledge smart contract generates the proof for the same after which only the user signs the transaction and makes it go through. This 2 Factor Authentication using the  Deepface AI model and Zero Knowledge Proof brings reliability to the security layer added through ZKMask.
